@@ -1,0 +1,18 @@
+<html xmlns:th="http://thymeleaf.org">
+	<head></head>
+	<body>
+		<h1>Transaction ID: [[${foundTransaction.id}]] ([[${transactionType}]])</h1>
+		<div>
+			Date: [[${foundTransaction.date}]]
+		</div>
+		<div>
+			Amount: <span th:if="${foundTransaction.type == 'C'}">-</span>[[${foundTransaction.amount}]]			
+		</div>
+		<div>
+			Description: [[${foundTransaction.description}]]
+		</div>
+		<div>
+			<a href="/transactions">back</a>
+		</div>
+	</body>
+</html>
